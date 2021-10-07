@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Catálogo de Séries</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/x-ico" href="img/tv-retro.ico">
+    </head>
+
+    <body>
+        <header>
+            <img id = "banner" src = "img/img-header.jpg">
+            <nav>
+                <ul>
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href = "#series-famosas">Séries mais famosas</a></li>
+                    <li><a href = "#busca-series">Busca por séries</a></li>
+                    <li><a href = "#form">Formulário</a></li>
+                    <li><a href = "#sobre-nos">Sobre nós</a></li>
+                    <li><a>Contato</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+
+        <div>
+            <h3 id="home" class = "titulo">Catálogo de Séries</h3>
+            <p class = "texto">
+                Site dedicado a amantes de séries!
+            </p>
+            <h3 class = "texto">Qual a origem dos seriados?</h3>
+            <p class = "texto">
+                Entre 1908 e 1920, o cinema se desenvolveu através dos chamados filmes em série ou seriados, que se tornaram a grande atração das casas de projeção. Essa inovação não era, porém, uma criação do cinema, pois na época, em especial na França, eram populares os fascículos quinzenais com histórias policiais e de aventuras, os quais se espalharam pela Europa. Foi na França, portanto, que o seriado surgiu, com Nick Carter, le roi des détectives, em 1908, baseado nos fascículos, sob direção de Victorin Jasset, diretor cheio de imaginação que muitas vezes improvisava o roteiro durante as filmagens. Mediante o sucesso da série, várias imitações foram feitas na Europa, tais como Raffles e Sherlock Holmes na Dinamarca, e Nick Carter na Alemanha.
+            </p>
+        </div>
+        <section>
+            <h3 id = "series-famosas" class="titulo">Séries mais famosas</h3>
+            <table class="tabela-series">
+                <tr>
+                    <td>
+                        Game os Thrones<br>
+                        <img src = "img/got.jpg">
+                    </td>
+                    <td>
+                        Stranger Things<br>
+                        <img src = "img/st.png">
+                    </td>
+                    <td>
+                        The Walking Dead<br>
+                        <img src = "img/twd.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        13 Reasons Why<br>
+                        <img src="img/13rw.jpg">
+                    </td>
+                    <td>
+                        The 100<br>
+                        <img src="img/t100.jpg">
+                    </td>
+                    <td>
+                        Orange Is the New Black<br>
+                        <img src = "img/otnb.jpg">
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3 class="titulo" id = "busca-series">Busca por séries</h3>
+        </section>
+            
+        <form id="registro">
+            <h3 class="titulo" id = "form">Formulário</h3>
+            <p class="texto">Faça o cadastro para receber todas as novidades das suas sérias favoritas!</p>
+            <div class="fomulario texto">
+                <p>Nome:</p>
+                <input id= "nome" name="nome" type="text">
+                <p>Email:</p>
+                <input id="email" name="email" type="text">
+                <p>Celular:</p>
+                <input id="celular" name="celular" type="text">
+                <br><br>
+                <button type = "button" id = "submitButton">
+                    Enviar
+                </button>
+            </div>
+            
+        </form>
+                       
+        <section>
+            <h3 class="titulo" id = "sobre-nos">Sobre nós</h3>
+        </section>
+            
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+
+</html>

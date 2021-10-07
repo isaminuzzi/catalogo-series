@@ -1,0 +1,87 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e2e2e2;
+    margin: 0;
+    font-family: "Inter-Medium",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#banner {
+    width: 100%;
+    opacity: 85%;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    
+}
+
+header {
+    font-family: opensanstitle,helvetica,arial,sans-serif;
+    font-style: strong;
+    background-color: #aa4880;
+    padding-bottom: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+nav li {
+    list-style: none;
+    margin: 25px;
+    display: inline;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+.titulo {
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+.texto {
+    font-size: 14px;
+    padding-left: 18px;
+}
+
+.tabela-series{
+    padding-left: 15px;
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    font-family: "Inter-Medium",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    border-spacing: 25px; 
+}
+
+table td { 
+    width:15%;
+    padding-bottom: 30px;
+    padding-top: 5px;
+    border: 3px solid #000;
+    border-radius: 12px;
+}
+
+table tr img{
+    width: 75%;
+    padding-top: 15px;
+    
+}
+
+.divErro{
+    padding-left: 1px;
+    border: 2px solid rgb(136, 41, 17);
+    padding: 10px;
+    width: 500px;
+    margin-top: 15px;
+    margin-left: 12px;
+    font-size: 13px;
+
+
+}
