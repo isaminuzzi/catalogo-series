@@ -31,6 +31,6 @@ function infoFormulario () {
         }
     } 
 }
-
+//teste
 botao.addEventListener("click", infoFormulario)
 
