@@ -1,3 +1,4 @@
+
 html {
     scroll-behavior: smooth;
 }
@@ -43,7 +44,7 @@ nav a {
     padding-top: 5px;
     padding-left: 15px;
 }
-/* teste */
+
 .texto {
     font-size: 14px;
     padding-left: 18px;
@@ -84,4 +85,87 @@ table tr img{
     font-size: 13px;
 
 
+}
+
+.info-series{
+    padding-left: 18px;
+}
+
+.busca-series{
+    margin-left:18px;
+    border: 2px solid #808080;
+    border-radius: 25px;
+    padding: 2px;
+    padding-left: 10px;
+    font-size: 13px;
+    color: #000080;
+    font-family: inherit;
+    width:190px;
+}
+
+.busca-series:focus{
+    outline: 0;
+    background-color: #92F6E8;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.series{
+    width: 65%;
+    margin:8px;
+    padding-top: 20px;
+    border-radius: 2px;
+    box-shadow: 0.2px 4px 5px rgba(0 0 0 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.series img{
+    width: 100%;
+    border-radius: 25px;
+}
+
+.info-series{
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 15px 15px;
+    letter-spacing: 1px;
+}
+
+.info-series h4{
+    margin-top: 0;
+}
+
+.info-series span{
+    background-color: #9BDDDD;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.info-series span.nota{
+    color: hsl(192, 87%, 18%);
+}
+
+.sinopse{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgb(80, 139, 194);
+    padding: 15px;
+    max-height: 100%;
+    border-radius: 5px;
+    transform: translateY(101%);
+    transition: transform 0.3 ease-in;
+}
+
+.series:hover .sinopse{
+    transform: translateY(0);
 }
