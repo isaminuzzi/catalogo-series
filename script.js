@@ -50,7 +50,7 @@ elementoBotao.onclick = function(event){
     const novaURL = url + '&query=' + value;
 
     fetch(novaURL)
-        .then((res) => res.json)
+        .then((res) => res.json())
         .then((data) => {
             console.log('Dados: ', data);
         })
