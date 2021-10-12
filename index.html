@@ -17,7 +17,6 @@
                     <li><a href = "#busca-series">Busca por séries</a></li>
                     <li><a href = "#form">Formulário</a></li>
                     <li><a href = "#sobre-nos">Sobre nós</a></li>
-                    <li><a>Contato</a></li>
                 </ul>
             </nav>
             
@@ -28,7 +27,7 @@
             <p class = "texto">
                 Site dedicado a amantes de séries!
             </p>
-            <h3 class = "texto">Qual a origem dos seriados?</h3>
+            <h3 class = "titulo">Qual a origem dos seriados?</h3>
             <p class = "texto">
                 Entre 1908 e 1920, o cinema se desenvolveu através dos chamados filmes em série ou seriados, que se tornaram a grande atração das casas de projeção. Essa inovação não era, porém, uma criação do cinema, pois na época, em especial na França, eram populares os fascículos quinzenais com histórias policiais e de aventuras, os quais se espalharam pela Europa. Foi na França, portanto, que o seriado surgiu, com Nick Carter, le roi des détectives, em 1908, baseado nos fascículos, sob direção de Victorin Jasset, diretor cheio de imaginação que muitas vezes improvisava o roteiro durante as filmagens. Mediante o sucesso da série, várias imitações foram feitas na Europa, tais como Raffles e Sherlock Holmes na Dinamarca, e Nick Carter na Alemanha.
             </p>
@@ -75,7 +74,7 @@
                 <button type="submit" id='pesquisa'> Pesquisar</button>
                 </form>
                 <!-- <main id="main"> -->
-                <div class="series-Pesquisadas">
+                <div class="series-Pesquisadas texto">
                     
                 </div>
                 
@@ -83,28 +82,42 @@
             </div>
             
         </section>
-            
-        <form id="registro">
-            <h3 class="titulo" id = "form">Formulário</h3>
-            <p class="texto">Faça o cadastro para receber todas as novidades das suas sérias favoritas!</p>
-            <div class="fomulario texto">
-                <p>Nome:</p>
-                <input id= "nome" name="nome" type="text">
-                <p>Email:</p>
-                <input id="email" name="email" type="text">
-                <p>Celular:</p>
-                <input id="celular" name="celular" type="text">
-                <br><br>
-                <button type = "button" id = "submitButton">
-                    Enviar
-                </button>
-            </div>
-            
-        </form>
-                       
-        <section>
+            <br>
+            <section class="blocoFormulario">
+                <form>
+                    <h3 class="titulo" id = "form">Formulário</h3>
+                    <p class="texto">Faça o cadastro para receber todas as novidades das suas sérias favoritas!</p>
+                    <div class="fomulario">
+                        <p>Nome:</p>
+                        <input id= "nome" name="nome" type="text" class = "inputControl">
+                    </div>
+                    <div class="fomulario">
+                        <p>Email:</p>
+                        <input id="email" name="email" type="text" class = "inputControl"> 
+                    </div>
+                    <div class="fomulario">
+                        <p>Celular:</p>
+                        <input id="celular" name="celular" type="text" class = "inputControl">
+                    </div class="fomulario">
+                    
+                    <br><br>
+                    <div class="fomulario">
+                        <button type = "button" id = "submitButton" class="fomulario">
+                            Enviar
+                        </button>   
+                    </div>
+                </form>
+                
+            </section>
+               
+                                
+        <section class="footer">
             <h3 class="titulo" id = "sobre-nos">Sobre nós</h3>
+            <p class="texto">Feito por Isadora Minuzzi Vieira - HDN Digital</p>
+            <br>
         </section>
+
+
         <script type="text/javascript" src="script.js"></script>
     </body>
 

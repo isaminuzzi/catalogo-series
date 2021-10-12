@@ -45,33 +45,6 @@ const elementoBotao = document.querySelector('#pesquisa');
 const elementoInput = document.querySelector('#buscaSeries');
 const seriesPesquisadas = document.querySelector('.series-Pesquisadas');
 
-/* <div class ="series-api">
-    <section class="sessao">
-        <form id="form">
-        <input type="text" placeholder="Busca" id="buscaSeries" class="busca-series">
-        <button type="submit" id='pesquisa'> Pesquisar</button>
-        </form>
-        <main id="main">
-            <div class="series">
-                <img src="img/got.jpeg"
-                alt = ""
-                id-serie-"155">
-                
-                <div class="info-series">
-                    <h4>Título da Série</h4>
-                    <span class="nota">9,8</span>
-                </div>
-                <div class="sinopse">
-                    <h4>Sinopse</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-
-            </div>
-        </main>
-    <section/>
-    </div> */
 
 function serieSection(series){
     return series.map((serie) => {
@@ -85,7 +58,8 @@ function serieSection(series){
     })
     
 }
-
+/* <h3> ${serie.name}</h3>
+            <h4>${serie.overview}</h4> */
 
 elementoBotao.onclick = function(event){
     event.preventDefault(); 

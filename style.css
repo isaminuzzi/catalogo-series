@@ -1,12 +1,15 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 html {
     scroll-behavior: smooth;
+    font-family: "Poppins", "sans-serif";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    background-color: #e2e2e2;
+    background-color: #085f63;
     margin: 0;
-    font-family: "Inter-Medium",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    /* font-family: "Inter-Medium",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif; */
 }
 
 #banner {
@@ -18,9 +21,9 @@ body {
 }
 
 header {
-    font-family: opensanstitle,helvetica,arial,sans-serif;
+    /* font-family: opensanstitle,helvetica,arial,sans-serif; */
     font-style: strong;
-    background-color: #aa4880;
+    background-color: #ff5959;
     padding-bottom: 10px;
     text-align: center;
     border-radius: 20px;
@@ -43,11 +46,15 @@ nav a {
 .titulo {
     padding-top: 5px;
     padding-left: 15px;
+    color: #49beb7; 
+    text-transform: uppercase;
 }
 
 .texto {
     font-size: 14px;
     padding-left: 18px;
+    padding-right: 18px;
+    color: hsl(44, 100%, 82%); 
 }
 
 .tabela-series{
@@ -56,7 +63,7 @@ nav a {
     text-align: center;
     margin: 0 auto;
     padding-bottom: 30px;
-    font-family: "Inter-Medium",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    /* font-family: "Inter-Medium",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif; */
     text-transform: uppercase;
     border-spacing: 25px; 
 }
@@ -65,8 +72,10 @@ table td {
     width:15%;
     padding-bottom: 30px;
     padding-top: 5px;
-    border: 3px solid #000;
     border-radius: 12px;
+    background-color: #0f6b70;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    color: #49beb7;
 }
 
 table tr img{
@@ -75,22 +84,32 @@ table tr img{
     
 }
 
+
 .divErro{
     padding-left: 1px;
-    border: 2px solid rgb(136, 41, 17);
+    background-color: rgb(80, 139, 194);
+    border-radius: 5px;
     padding: 10px;
     width: 500px;
     margin-top: 15px;
     margin-left: 12px;
     font-size: 13px;
+    color: #000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
 
 }
 
-.info-series{
+#submitButton{
+    border-radius: 5px;
+    color:#000;
+    background-color: rgb(54, 103, 150);
+}
+
+/* .info-series{
     padding-left: 18px;
 }
-
+ */
 .busca-series{
     margin-left:18px;
     border: 2px solid #808080;
@@ -108,64 +127,105 @@ table tr img{
     background-color: #92F6E8;
 }
 
-/* main{
+.series-Pesquisadas {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
-
-.series{
-    width: 60%;
-    margin:8px;
-    padding-top: 20px;
-    border-radius: 2px;
-    box-shadow: 0.2px 4px 5px rgba(0 0 0 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.series img{
     width: 100%;
-    border-radius: 25px;
+    overflow-x: auto;
+    padding: 15px;
+    overflow-x: hidden;
+    justify-content: start;
 }
-
-.info-series{
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 15px 15px;
-    letter-spacing: 1px;
-}
-
-.info-series h4{
-    margin-top: 0;
-}
-
-.info-series span{
-    background-color: #9BDDDD;
-    padding: 5px 9px;
+.series-Pesquisadas img{
+    width: 320px;
     border-radius: 5px;
-    font-weight: bold;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-top:20px;
+    
 }
 
-.info-series span.nota{
-    color: hsl(192, 87%, 18%);
+.series-Pesquisadas h3{
+    color: #49beb7; 
 }
 
-.sinopse{
+.series-Pesquisadas h3 h4{
     position: absolute;
     left:0;
     right:0;
     bottom:0;
     background-color: rgb(80, 139, 194);
-    padding: 15px;
-    max-height: 100%;
+    padding-left: 30px;
+    max-height: 70%;
     border-radius: 5px;
     transform: translateY(101%);
     transition: transform 0.3 ease-in;
+    overflow-y: auto;
+    text-align: center;
+}
+.series-Pesquisadas h4{
+    transform: translateY(10%);
+    font-size: 14px;
+    color: hsl(44, 100%, 82%); 
+    padding-right: 30px;
+    margin: 0 left;
+    width: 315px;
+
 }
 
-.series:hover .sinopse{
-    transform: translateY(0);
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track .series-Pesquisadas{
+    background-color: #428bca;
+}
+
+.blocoFormulario .fomulario{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    width: 85%;  
+    display: flex;
+    flex-direction: row;
+}
+
+.fomulario .inputControl.right-inline{
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.blocoFormulario{
+    border-radius: 7px;
+    background-color: #0f6b70;
+    width: 70%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.blocoFormulario .inputControl{
+    flex: 1 1;
+    display: block;
+    margin: -4px 6px 8px;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.fomulario #submitButton{
+    width: 240px;
+    font-size: 15px;
+    padding-left:90px;
+    padding-right: 15px;
+}
+
+.footer{
+    background-color: #ff5959;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+#sobre-nos{
+    color:#000;
 }
