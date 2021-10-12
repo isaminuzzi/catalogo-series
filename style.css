@@ -108,11 +108,11 @@ table tr img{
     background-color: #92F6E8;
 }
 
-main{
+/* main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+} */
 
 .series{
     width: 60%;

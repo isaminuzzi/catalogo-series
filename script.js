@@ -38,10 +38,54 @@ botao.addEventListener("click", infoFormulario)
 //API
 
 const API_KEY = '993bc1cbb853af6db9b029fe4e141ab2';
-const url = 'https://api.themoviedb.org/3/search/tv?api_key=993bc1cbb853af6db9b029fe4e141ab2'
+const url = 'https://api.themoviedb.org/3/search/tv?&language=pt-BR&api_key=993bc1cbb853af6db9b029fe4e141ab2'
+const url_imagem = 'https://image.tmdb.org/t/p/w500';
 
 const elementoBotao = document.querySelector('#pesquisa');
 const elementoInput = document.querySelector('#buscaSeries');
+const seriesPesquisadas = document.querySelector('.series-Pesquisadas');
+
+/* <div class ="series-api">
+    <section class="sessao">
+        <form id="form">
+        <input type="text" placeholder="Busca" id="buscaSeries" class="busca-series">
+        <button type="submit" id='pesquisa'> Pesquisar</button>
+        </form>
+        <main id="main">
+            <div class="series">
+                <img src="img/got.jpeg"
+                alt = ""
+                id-serie-"155">
+                
+                <div class="info-series">
+                    <h4>Título da Série</h4>
+                    <span class="nota">9,8</span>
+                </div>
+                <div class="sinopse">
+                    <h4>Sinopse</h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
+            </div>
+        </main>
+    <section/>
+    </div> */
+
+function serieSection(series){
+    return series.map((serie) => {
+        return`
+        <div class="series">
+            <img src=${url_imagem + serie.poster_path} id-serie=${serie.id} />
+            <h3> ${serie.name}</h3>
+            <h4>${serie.overview}</h4>
+        </div>
+        `;                               
+    })
+    
+}
+
 
 elementoBotao.onclick = function(event){
     event.preventDefault(); 
@@ -52,47 +96,17 @@ elementoBotao.onclick = function(event){
     fetch(novaURL)
         .then((res) => res.json())
         .then((data) => {
+            //data.results [];
+            const series = data.results;
+            const blocoSeries = serieSection(series);
+            console.log(document.querySelector('.series-Pesquisadas')); 
+            console.log(seriesPesquisadas.children);
+            seriesPesquisadas.innerHTML = blocoSeries;
             console.log('Dados: ', data);
+            
         })
         .catch((error) => {
             console.log('Erro: ', error);
         });
     console.log("Valor: ", value);
 }
-
-/* 
-buscaSerie(api_url); */
-
-//nao esta funcionando - nao retorna json - erro 404
-/* function buscaSerie(url){
-    fetch(url).then(res => res.json).then(data => {
-        //nao printa
-        console.log(data);
-        //inicializando a função
-        apareceSerie(data.results);
-    })
-} */
-
-
-/* 
-function apareceSerie(data){
-    data.forEach(serie => {
-        const serieElemento = document.createElement('div');
-       serieElemento.classList.add ('serie');
-       serieElemento.innerHTML = `
-       <img src="img/got.jpeg">
-                    
-                    <div class="info-series">
-                        <h4>Título da Série</h4>
-                        <span class="nota">9,8</span>
-                    </div>
-                    <div class="sinopse">
-                        <h4>Sinopse</h4>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
-       
-       `
-    });
-} */
