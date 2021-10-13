@@ -4,11 +4,18 @@ html {
     font-family: "Poppins", "sans-serif";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    
 }
-
+/* *{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+} */
 body {
     background-color: #085f63;
-    margin: 0;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
     /* font-family: "Inter-Medium",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif; */
 }
 
@@ -27,7 +34,9 @@ header {
     padding-bottom: 10px;
     text-align: center;
     border-radius: 20px;
+
 }
+
 
 nav li {
     list-style: none;
@@ -41,6 +50,10 @@ nav a {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
+}
+
+header nav a:hover{
+    color:rgb(10, 114, 114);
 }
 
 .titulo {
@@ -85,31 +98,7 @@ table tr img{
 }
 
 
-.divErro{
-    padding-left: 1px;
-    background-color: rgb(80, 139, 194);
-    border-radius: 5px;
-    padding: 10px;
-    width: 500px;
-    margin-top: 15px;
-    margin-left: 12px;
-    font-size: 13px;
-    color: #000;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
-
-}
-
-#submitButton{
-    border-radius: 5px;
-    color:#000;
-    background-color: rgb(54, 103, 150);
-}
-
-/* .info-series{
-    padding-left: 18px;
-}
- */
+/* API */
 .busca-series{
     margin-left:18px;
     border: 2px solid #808080;
@@ -141,6 +130,18 @@ table tr img{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding-top:20px;
     
+}
+
+#pesquisa{
+    border: none;
+    background-color: #ff5959;
+    width: 150px;
+    height: 30px;
+    border-radius: 25px;
+    font-family: "Poppins", "sans-serif";
+    color: #fff;
+    cursor: pointer;
+
 }
 
 .series-Pesquisadas h3{
@@ -179,13 +180,15 @@ table tr img{
     background-color: #428bca;
 }
 
+/* formulario */
+
 .blocoFormulario .fomulario{
-    padding-top: 10px;
+    padding-top: 7px;
     padding-bottom: 10px;
-    margin: auto;
-    width: 85%;  
-    display: flex;
-    flex-direction: row;
+    margin: 0 auto;
+    width: 35%;  
+ /*    display: flex;
+    flex-direction: row; */
 }
 
 .fomulario .inputControl.right-inline{
@@ -196,7 +199,8 @@ table tr img{
 .blocoFormulario{
     border-radius: 7px;
     background-color: #0f6b70;
-    width: 70%;
+    width: 650px;
+    padding-bottom: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display:flex;
     justify-content: center;
@@ -204,20 +208,52 @@ table tr img{
     margin: auto;
 }
 
-.blocoFormulario .inputControl{
+.formulario .inputControl{
     flex: 1 1;
     display: block;
     margin: -4px 6px 8px;
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
     border-radius: 5px;
+    
+
 }
 
 .fomulario #submitButton{
-    width: 240px;
-    font-size: 15px;
-    padding-left:90px;
-    padding-right: 15px;
+    width: 200px;
+    font-size: 13px;
+    padding: 7px;
+    border-radius: 25px;
+    border:none;
+    color:#fff;
+    font-family: "Poppins", "sans-serif";
+    background-color: #ff5959;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divErro{
+    background-color: #0f6b70;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    font-size: 13px;
+    color: #000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+}
+.divErro h1{
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 12px;
+    background-color: #ff5959;
+    color: #fff;
+    
 }
 
 .footer{

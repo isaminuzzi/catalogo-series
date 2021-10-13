@@ -16,24 +16,23 @@ function infoFormulario () {
 
     const erros = [];
 
-    const divErros = document.createElement("div");
+    const h1Erros = `<h1>Preencha todos os campos do formulário para realizar o cadastro! </h1>
+    `
+    const divErros = document.querySelector('.divErro');
 
     if (!inputNameValue || !inputEmailValue || !inputCelularValue) {
-        erros.push("Preencha todos os campos do formulário para realizar o cadastro!")
-        divErros.className = "divErro"
-        divErros.innerHTML= erros
-        form.appendChild(divErros);
-    }
-
-    if(erros.length === 0) {
+        console.log(divErros);
+        divErros.innerHTML = h1Erros;
+    } else{
         const formulario = document.getElementById("registro");
         if(confirm("Você quer realmente mandar essa mensagem?")) {
             formulario.submit();
         }
-    } 
+    }    
+        
 }
 
-botao.addEventListener("click", infoFormulario)
+botao.addEventListener("click", infoFormulario);
 
 //API
 
@@ -58,8 +57,7 @@ function serieSection(series){
     })
     
 }
-/* <h3> ${serie.name}</h3>
-            <h4>${serie.overview}</h4> */
+
 
 elementoBotao.onclick = function(event){
     event.preventDefault(); 
@@ -73,8 +71,8 @@ elementoBotao.onclick = function(event){
             //data.results [];
             const series = data.results;
             const blocoSeries = serieSection(series);
-            console.log(document.querySelector('.series-Pesquisadas')); 
-            console.log(seriesPesquisadas.children);
+/*             console.log(document.querySelector('.series-Pesquisadas')); 
+            console.log(seriesPesquisadas.children); */
             seriesPesquisadas.innerHTML = blocoSeries;
             console.log('Dados: ', data);
             
