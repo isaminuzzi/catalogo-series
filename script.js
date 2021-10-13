@@ -71,8 +71,6 @@ elementoBotao.onclick = function(event){
             //data.results [];
             const series = data.results;
             const blocoSeries = serieSection(series);
-/*             console.log(document.querySelector('.series-Pesquisadas')); 
-            console.log(seriesPesquisadas.children); */
             seriesPesquisadas.innerHTML = blocoSeries;
             console.log('Dados: ', data);
             
